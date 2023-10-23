@@ -1,0 +1,76 @@
+//  /// Bruteforce approach ///  //
+// time compexity O(n)
+/*
+#include <bits/stdc++.h>
+using namespace std;
+bool isprime(int n)
+{
+    if(n==1)
+      return false;
+      
+    for(int i=2;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            return false;
+        }
+    }
+    return true;
+    
+}
+int main() 
+{
+    int a=3;
+    
+    if(isprime(a))
+    {
+        cout<<"Prime Number";
+    }
+    else
+    {
+        cout<<"Not a prime Number";
+    }
+
+    return 0;
+}
+
+*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  /// Optimized approach ///  //
+// time compexity O(sqrt(n))
+
+#include <bits/stdc++.h>
+using namespace std;
+bool isprime(int n)
+{
+    if(n==1)
+      return false;
+      
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int main() 
+{
+    int a=3;
+    
+    if(isprime(a))
+    {
+        cout<<"Prime Number";
+    }
+    else
+    {
+        cout<<"Not a prime Number";
+    }
+
+    return 0;
+}
+
+
